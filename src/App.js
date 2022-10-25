@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Directory from "./components/directory/directory";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./categories.styles.scss";
 
-export default App;
+const categories = [
+  {
+    id: 1,
+    title: "New Arrivals",
+    imageUrl:
+      "https://aypoo.com.ar/wp-content/uploads/2022/10/20221012_130632.jpg",
+  },
+  {
+    id: 2,
+    title: "Remeras",
+    imageUrl:
+      "https://aypoo.com.ar/wp-content/uploads/2021/01/1620055625061.jpg",
+  },
+  {
+    id: 3,
+    title: "Vestidos",
+    imageUrl: "https://aypoo.com.ar/wp-content/uploads/2021/10/931-9.jpg",
+  },
+  {
+    id: 4,
+    title: "Blusas",
+    imageUrl:
+      "https://aypoo.com.ar/wp-content/uploads/2022/07/IMG-0152-scaled.jpg",
+  },
+  {
+    id: 5,
+    title: "Calzas",
+    imageUrl: "https://aypoo.com.ar/wp-content/uploads/2019/05/10.jpg",
+  },
+];
+
+const App = () => {
+  return <Directory categories={categories} />;
+};
