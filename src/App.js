@@ -1,7 +1,5 @@
 import Directory from "./components/directory/directory";
 
-import "./categories.styles.scss";
-
 const categories = [
   {
     id: 1,
@@ -36,3 +34,5 @@ const categories = [
 const App = () => {
   return <Directory categories={categories} />;
 };
+
+export default App;
