@@ -6,9 +6,13 @@ import { auth, signInWithGooglePopup, signInWithGoogleRedirect , createUserDocum
 import SignUpForm from "../sign-up/sign-up";
 
 const SignIn = () => {
-    useEffect(async () => {
-        const response = await getRedirectResult(auth);
-        console.log(response);
+    useEffect( () => {
+        async function fetchData(){
+            const response = await getRedirectResult(auth);
+            if(response){
+                const userDocRef = await createUserDocumentFromAuth(response.user);
+            }
+        }
     }, []);
 
     const logGoogleUser = async () => {
