@@ -6,7 +6,7 @@ import Authentication from "./routes/authentication/authentication";
 
 const Shop = () => {
   return <h1>I'm the Shop</h1>
-}
+};
 
 const App = () => {
   return (
